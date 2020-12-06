@@ -103,11 +103,11 @@ nav a {
 #header .header_bottom .header_slider5 {background:#eb0000 url(../img/bg/bg5.jpg) no-repeat center /cover;}
 
 /* 메인 슬라이드 버튼 및 인디케이터 */
-#header button.slick-prev, #header button.slick-next {position:absolute; top:50%; transform: translateY(-50%); width:4rem; height:4rem; border:none; background-color: rgba(0,0,0,.3); color:#fff; cursor: pointer; font-size: 2rem; z-index:99;}
+#header button.slick-prev, #header button.slick-next {position:absolute; top:50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width:4rem; height:4rem; border:none; background-color: rgba(0,0,0,.3); color:#fff; cursor: pointer; font-size: 2rem; z-index:99;}
 #header button.slick-prev:hover, #header button.slick-next:hover{background-color: rgba(0,0,0,.7);}
 #header button.slick-prev {left:10%;}
 #header button.slick-next {right:10%;}
-#header .slick-dots {position: absolute; bottom:10%; left:50%; transform: translateX(-50%);}
+#header .slick-dots {position: absolute; bottom:10%; left:50%; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
 #header .slick-dots li {display:inline-block; text-align: center; margin:3px;}
 #header .slick-dots li button {width:12px; height:12px; border-radius: 50%; background-color: rgba(256,256,256,.5); cursor: pointer; border:none; font-size:0;}
 #header .slick-dots li button:hover{background-color:#eb7777;}
@@ -185,7 +185,7 @@ nav a {
 #sec_varieties .varieties_cont img {height:15rem; margin:0 auto; opacity: .5;}
 #sec_varieties .varieties_cont div p {bottom:-15px; font-size: 0.7rem; color:#fff; text-align: center; position:relative; display:none;}
 #sec_varieties .varieties_cont div.slick-current p {display:block; }
-#sec_varieties .slick-center {transform: scale(1.5); transition: .3s;}
+#sec_varieties .slick-center {-webkit-transform: scale(1.5); transform: scale(1.5); transition: .3s;}
 #sec_varieties .slick-center img {opacity:1;}
 
 #sec_varieties button.slick-prev, #sec_varieties button.slick-next {display:none !important;}
@@ -209,8 +209,8 @@ nav a {
 
 #sec_media .media_cont a {position: relative; display:block;overflow: hidden; }
 #sec_media .media_cont a img {transition:.5s;}
-#sec_media .media_cont a:hover img {transform: scale(1.1);}
-#sec_media .media_cont a p {width:100%; display:none; color:#fff; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); text-align: center; z-index:10; font-size:1.2rem; line-height:1.8rem;transition: .5s;}
+#sec_media .media_cont a:hover img {-webkit-transform: scale(1.1); transform: scale(1.1);}
+#sec_media .media_cont a p {width:100%; display:none; color:#fff; position: absolute; top:50%; left:50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; z-index:10; font-size:1.2rem; line-height:1.8rem;transition: .5s;}
 #sec_media .media_cont a:after{width:100%; height:100%; content:''; display:block; background-color: rgba(0,0,0,0); position: absolute; top:0; left:0; transition: .5s;}
 #sec_media .media_cont a:hover:after {background-color: rgba(0,0,0,.8);}
 #sec_media .media_cont a:before{content:''; display:block; width:calc(100% - 2rem); height:calc(100% - 2rem); position:absolute; top:1rem; left:1rem; border:none; transition:.5s;}
