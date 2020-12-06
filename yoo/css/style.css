@@ -1,0 +1,336 @@
+html, body {width:100%; height:100%; color:#181818; font-size:16px; line-height:24px; font-family: 'Noto Sans KR', sans-serif;}
+.container {width:1300px; margin:0 auto;}
+h1, h2, h3, h4, h5, h6, div.name, nav,
+.logo_name p, .keyworld span, .change div p {font-family: 'Poppins', sans-serif;}
+h2, div.name {font-size:10rem; line-height:15rem; font-weight:bold;}
+h3 {font-size:3rem; line-height:4.5rem; font-weight:bold;}
+strong {display:block; font-weight:bold; font-size:1.1rem;}
+a {-webkit-transition:.5s; transition:.5s; color:#181818;}
+.clear:after {content:''; display:block; clear:both;}
+@media (max-width:1299px){
+    html, body {font-size:14px; line-height:21px;}
+    .container {width:90%; margin:0 auto;}
+    h2, div.name {font-size:7rem; line-height:10.5rem;}
+    h3 {font-size:2.4rem; line-height:3.6rem;}
+}
+@media (max-width:767px){
+    h2, div.name {font-size:3rem; line-height:4.5rem;}
+    h3 {font-size:2rem; line-height:3rem;}
+}
+/* common area fin / ==================================================== */
+
+        
+        
+/* change / ========================================================= */
+.change {background-color:#181818; height:100vh; width:100%; overflow: hidden; position:fixed; left:0; z-index:99999; -webkit-animation: bgchange 2.5s forwards; animation:bgchange 2.5s forwards;}
+@keyframes bgchange {
+    0% {width:0;}
+    40% {width:100vw;}
+    60% {width:100vw;}
+    100% {width:0;}
+}
+.change div {width:100%; overflow: hidden; position:relative; height:20vh;}
+.change div p {color:#fff; line-height:20vh; font-size:15vh; position: absolute; text-transform: uppercase; width:500%;}
+.change div:nth-child(1) p, .change div:nth-child(3) p, .change div:nth-child(5) p {-webkit-animation:changeLeft 5s infinite forwards; animation:changeLeft 5s infinite forwards;}
+@keyframes changeLeft {
+    0% {left:0%;}
+    100% {left:-10%;}
+}
+.change div:nth-child(2) p, .change div:nth-child(4) p {-webkit-animation:changeRight 5s infinite forwards; animation:changeRight 5s infinite forwards;}
+@keyframes changeRight {
+    0% {left:0%;}
+    100% {left:10%;}
+}
+#global {opacity:0; -webkit-animation:bgop 1s 1s forwards; animation:bgop 1s 1s forwards;}
+@keyframes bgop {
+    100% {opacity:1;}
+}
+/* change fin / ========================================================= */
+
+
+
+/* header / ========================================================= */
+.header {width:15rem; height:100vh; background-color: #181818; position:fixed; left:-15rem; -webkit-transition: .5s; transition: .5s; z-index:9999;}
+.header.on {left:0;}
+.header nav .nav_logo {padding-top:40px; text-align: center;}
+.header nav .nav_logo img {height:60px; display:inline-block;}
+/* header 햄버거 버튼 */
+.header nav .hamburger {position:absolute; right:-50px; width:50px; height:50px; background-color: #181818; padding:15px 0 0 10px; cursor: pointer; -webkit-animation:mainhd 1s 3s forwards; top:-50px; animation:mainhd 1s 3s forwards; top:-50px;}
+@keyframes mainhd {    
+    100%{top:100px;}
+}
+.header nav .hamburger span {width:30px; height:3px; display:block; text-align: center; background-color: #fff;}
+.header nav .hamburger span:nth-child(2) {margin:6px 0;}
+/* header 메뉴 부분 */
+.header nav ul {width:100%; padding-top:50px;}
+.header nav ul li {text-align:center; margin-bottom:10vh;}
+.header nav ul li a {display:inline-block; color:#555; font-size:2rem; font-weight: bold;}
+.header nav ul li a .li_wrap {position:relative; width:auto; overflow:hidden;}
+.header nav ul li a .li_wrap p {display:inline-block;}
+.header nav ul li a .li_wrap .li_float {position:absolute; top:0; left:0; display:-webkit-box; display:-ms-flexbox; display:flex;}
+.header nav ul li a .li_wrap .li_float span {display:none; margin-right:1rem;}
+.header nav .nav_name a {display:block; text-align: center; color:#fff;}
+/* header가 on일 때 */
+.header nav ul li.on a {color:#f9d401;}
+.header nav ul li.on .li_wrap p {visibility:hidden;}
+.header nav ul li.on .li_wrap .li_float span {display:block;}
+.header nav ul li.thispage a {color:#f9d401;}
+.header nav ul li.thispage .li_wrap p {visibility:hidden;}
+.header nav ul li.thispage .li_wrap .li_float span {display:block;}
+/* header fin / ======================================================== */
+
+
+/* main page / ========================================================= */
+#main {width:100%; height:100%; position:relative; overflow: hidden;}
+#main .container{position:relative;}
+#main .wrap {position:relative; width:1000px; height:auto;}
+#main .wrap .mbox {position:relative; width:100%; overflow: hidden;}
+#main .wrap .mbox div {height:250px; position:absolute;}
+#main .mbox_1 {top:50px; -webkit-animation:mbox1 1.5s; animation:mbox1 1.5s; background-color:#181818;}
+    @keyframes mbox1 {
+        0% {width:0; left:0;}
+        40% {width:100%; left:0;}
+        50% {width:100%;}
+        60% {width:100%; right:0;}
+        100% {width:0; right:0;}
+    }
+#main .wrap > div:nth-child(1) h2 {-webkit-animation:title1 1s 1.5s ease-in-out forwards; animation:title1 1s 1.5s ease-in-out forwards; opacity:0;}
+    @keyframes title1 {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+#main .mbox_2 {top:0; -webkit-animation:mbox2 1.5s .8s; animation:mbox2 1.5s .8s; background-color:#f9d401;}
+    @keyframes mbox2 {
+        0% {width:0; left:0;}
+        40% {width:100%; left:0;}
+        50% {width:100%;}
+        60% {width:100%; right:0;}
+        100% {width:0; right:0;}
+    }
+#main .wrap > div:nth-child(2) h2 {text-align: right; -webkit-animation:title2 1s 2s ease-in-out forwards; animation:title2 1s 2s ease-in-out forwards; opacity:0; background-color:#f9d401; color:#fff; width:100%;}
+    @keyframes title2 {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+#main .mbox_3 {top:0; -webkit-animation:mbox3 1.5s 1.5s; animation:mbox3 1.5s 1.5s; background-color:#888;}
+    @keyframes mbox3 {
+        0% {width:0; left:0;}
+        40% {width:100%; left:0;}
+        50% {width:100%;}
+        60% {width:100%; right:0;}
+        100% {width:0; right:0;}
+    }
+#main .wrap > div:nth-child(3) h2 {-webkit-animation:title3 1s 2.5s ease-in-out forwards; animation:title3 1s 2.5s ease-in-out forwards; opacity:0;}
+    @keyframes title3 {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+#main #plane {position:absolute; top:0; right:0%; width:100px; height:100px; -webkit-transition:.5s; transition:.5s;}
+#main #plane img {position:absolute; top:100%; left:-40%; -webkit-animation:plane 4s ease-in-out forwards; animation:plane 4s ease-in-out forwards;}
+    @keyframes plane {
+        0% {top:205%; left:-200%; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+        100% {top:100%; left:-40%; -webkit-transform:rotate(35deg); transform:rotate(35deg);}
+    }
+#main #plane #path {position:absolute; top:5%; right:-20%; -webkit-animation:pathview .5s 3.5s forwards; animation:pathview .5s 3.5s forwards; opacity:0; -webkit-transition:.5s; transition:.5s;}
+    @keyframes pathview {
+        to {opacity:1;}
+    }
+#main #plane #path span {width:100px; height:100px; border-radius: 50%; border:3px solid #f9d401; position: absolute; right:40%; top:-50%;}
+#main #plane #path .circle_1 {-webkit-animation: circle1 3s cubic-bezier(.215,.61,.355,1) infinite both; animation: circle1 3s cubic-bezier(.215,.61,.355,1) infinite both;}
+    @keyframes circle1 {
+        0% {-webkit-transform: rotate(0deg) rotateY(0deg); transform: rotate(0deg) rotateY(0deg);}
+        50% {-webkit-transform: rotate(180deg) rotateY(180deg); transform: rotate(180deg) rotateY(180deg);}
+        100% {-webkit-transform: rotate(180deg) rotateY(180deg); transform: rotate(180deg) rotateY(180deg);}
+    }
+#main #plane #path .circle_2 {-webkit-animation: circle2 3s cubic-bezier(.215,.61,.355,1) infinite both; animation: circle2 3s cubic-bezier(.215,.61,.355,1) infinite both;}
+    @keyframes circle2 {
+        0% {-webkit-transform: rotate(0deg) rotateX(0deg); transform: rotate(0deg) rotateX(0deg);}
+        50% {-webkit-transform: rotate(180deg) rotateX(180deg); transform: rotate(180deg) rotateX(180deg);}
+        100% {-webkit-transform: rotate(180deg) rotateX(180deg); transform: rotate(180deg) rotateX(180deg);}
+    }
+#main #plane #path strong {text-decoration: none; color:#333; position:absolute; top:38px; right:35px; font-size: 1.2rem;}
+#main .main_bg {position:absolute; bottom:0; right:1vw;}
+#main .main_bg img {width:25vw; opacity:0; -webkit-animation:mainbg 1s 2s forwards; animation:mainbg 1s 2s forwards;}
+    @keyframes mainbg {
+        0% {opacity:0; -webkit-transform: scale(0.8); transform: scale(0.8);}
+        50% {-webkit-transform: scale(1.2); transform: scale(1.2);}
+        100% {opacity:1; -webkit-transform: scale(1); transform: scale(1);}
+    }
+/* main 미디어쿼리 */
+@media (max-width:1299px){
+    #main .wrap {width:90%; max-width:800px;}
+}
+@media (max-width:767px){
+    #main .container{padding-top:150px;}
+    #main .wrap {width:90%; max-width:450px;}
+    #main .main_bg img {width:70vw;}
+}
+/* main fin / ========================================================== */
+
+
+/* sub1 (profile) / ==================================================== */
+#profile {width:100%; height:16000px;}
+#profile > div {width:100%; height:100vh; background:#181818; position:fixed; z-index:998;}
+/* who is yoo in yong ? */
+#profile .nametxt {position:fixed; top:10%;left:50%; -webkit-transform:translateX(-50%); transform:translateX(-50%); width:100%; height:1000px;}
+#profile .nametxt h2{text-align: center; color:#fff; text-shadow: 2px 2px 5px #656565; -webkit-text-shadow: 2px 2px 5px #656565;}
+#profile .nametxt .name{color:#fff; text-shadow: 2px 2px 5px #656565; -webkit-text-shadow: 2px 2px 5px #656565; position:relative; width:1200px; height:auto; margin:0 auto;}
+#profile .nametxt .name span{position:absolute; top:0;}
+#profile .nametxt .name span.on{opacity:1;}
+/* keyworld */
+#profile .keyword {top:0; left:0;}
+#profile .keyword span {display:block; color:#fff; font-size:2rem; font-weight: bold; text-transform: uppercase; position:absolute;}
+/* ability, edu, contact 공통영역 */
+#profile .paral_cont {position:fixed; top:0; left:0; width:100%; height:100%; color:#fff;}
+#profile .paral_cont h3 {margin:10rem 0 3rem;}
+#profile .paral_cont li {height:5rem; position:relative;}
+#profile .paral_cont p {font-size:1.5rem;}
+/* ability */
+#profile .ability ul li {margin:0 5%; width:40%; float:left;}
+#profile .ability ul li span {position:absolute; left:12rem; top:.5rem;}
+#profile .ability ul li span:nth-of-type(1) {height:15px; background: #f9d401; z-index:1;}
+#profile .ability ul li span:nth-of-type(2) {width:15rem; height:15px; background: #878365;}
+#ab_ht {width:13rem;}
+#ab_jq {width:11rem;}
+#ab_il {width:10rem;}
+#ab_ph {width:9rem;}
+#ab_hg {width:14rem;}
+#ab_ex {width:12rem;}
+#ab_pw {width:12rem;}
+#ab_pr {width:8rem;}
+/* profile 페이지 배경 */
+#profile .nightbg {position:fixed; top:0; left:0; width:100vw; height:100vh; overflow:hidden;}
+#profile .nightbg div {position:absolute; width:16000px; height:100%;}
+#profile .namebg {position:fixed; bottom:0; left:0; width:100vw; height:110px; overflow:hidden;}
+#profile .namebg div {position:absolute; width:16000px; height:100%;}
+#profile .namebg div img {height:100px;}
+#profile .namebg div:nth-child(1) {z-index:53;}
+#profile .namebg div:nth-child(2) {z-index:52;}
+#profile .namebg div:nth-child(3) {z-index:51;}
+#profile .namebg div:nth-child(2) img {opacity:.4;}
+#profile .namebg div:nth-child(3) img {opacity:.2;}
+/* progress bar */
+#profile .namebg #progress {width:0; height:10px; position: fixed; bottom:0; left:0; z-index:999; background: #f9d401;}
+#profile .namebg #progress span{display:block; position:absolute; top:-22px; right:0; width:13px; height:20px; background:url(../img/map_yellow_min.png);}
+/* profile페이지 미디어쿼리 */
+@media (min-width:768px) and (max-width:1299px){
+    #profile .nametxt .name {width:767px;}
+    #profile .container {width:98%;}
+    #profile .ability ul li span {left:10rem;}
+}
+@media (max-width:767px){
+    #profile .nametxt .name {width:340px;}
+    #profile .container {width:98%;}
+    #profile .keyword span {font-size:1rem; font-weight:normal;}
+    #profile .ability ul li {float: none;}
+    #profile .ability li, #profile .edu li, #profile .contact li {height:3rem;}
+    #profile .ability ul li span {left:9rem;}
+    #profile .ability p, #profile .edu p, #profile .contact p {font-size:1.2rem;}
+}
+/* sub1 (profile) fin / ==================================================== */
+
+
+/* sub2 (portfolio) / =================================================== */
+/* sub2 common area */
+.ful_wrap {width:100%; height:100%; position:fixed; top:0; left:0; background: url(../img/po_bg2.png) no-repeat left bottom / cover;}
+.ful_bg .light_1 {position: absolute; bottom:180px; left:375px;}
+.ful_bg .light_1 img {width:50px;}
+#fullpage {width:100%; height:100%;}
+#fullpage .container {padding-top:100px;}
+#fullpage .txtbox {width:50%; float:left; padding-left:5rem;}
+#fullpage .txtbox span {color:#333; font-weight:bold; display:block; padding-top:10rem;}
+#fullpage .txtbox h3 {padding:.5rem 0; letter-spacing: -.1rem;}
+#fullpage .txtbox strong {padding-bottom:1rem;}
+#fullpage .txtbox div {margin-top:1rem;}
+#fullpage .txtbox div a {display:inline-block; width:12rem; height:3rem; text-align:center; line-height:3rem; border:1px solid #f9d401; border-radius: 2rem; font-weight:bold; margin:0 1rem 1rem 0; position:relative; overflow: hidden;}
+#fullpage .txtbox div a:after {content:''; width:0; height:0; position:absolute; top:50%; left:50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: #f9d401; z-index:-1; -webkit-transition: .3s; transition: .3s; border-radius: 2rem; opacity:0;}
+#fullpage .txtbox div a:hover {background-color:transparent;}
+#fullpage .txtbox div a:hover:after {width:12rem; height:3rem; opacity:1;}
+#fullpage .imgbox {width:50%; float:right; padding-left:100px; position:relative;}
+#fullpage .imgbox a {display:block;}
+#fullpage .imgbox a img {width:100%; box-shadow: 15px 15px 15px #181818;}
+#fullpage .imgbox .imgbox_bg {position:absolute; top:-65px; left:25px; z-index:-1;}
+#fullpage .imgbox .imgbox_bg img {width:10rem;}
+#fullpage .no1 .txtbox h3 {color:#eb0000;}
+#fullpage .no2 .txtbox h3 {color:#07abbd;}
+#fullpage .no3 .txtbox h3 {color:#3b1a50;}
+#fullpage .no4 .txtbox h3 {color:#00c7f5;}
+#fullpage .no5 .txtbox h3 {color:#18345a;}
+#fullpage .no6 .txtbox h3 {color:#4a816c;}
+/* 풀페이지 인디케이터 */
+#fp-nav.right {right:3rem;}
+#fp-nav.right ul li {margin:1rem;}
+#fp-nav.right ul li a {transition: none;}
+#fp-nav.right ul li a span {width:.5rem; height:.5rem; background:#181818;}
+#fp-nav.right ul li a span:after {content:''; position:absolute; width:13px; height:20px; background: url(../img/map_yellow_min.png); top:-5px; left:1px; opacity:0; }
+#fp-nav.right ul li a.active span {width:0; height:0;}
+#fp-nav.right ul li a.active span:after {opacity:1; top:0;}
+/* 풀페이지 top버튼 */
+#fl_top {position:fixed; z-index:99999; right:3rem; bottom:10%;}
+#fl_top a {display:block; width:3rem; height:3rem; position:relative;}
+#fl_top a:before {content:'UP!'; position:absolute; top:-25px; left:14px; font-weight:bold; font-size:.8rem;}
+#fl_top a img {width:100%; -webkit-transition:.5s; transition:.5s;}
+/* portfolio 미디어쿼리 */
+@media (max-width:1299px){
+    #fullpage .txtbox {padding-left:0;}
+    #fullpage .imgbox {padding-left:0;}
+    #fullpage .txtbox div a {width:10rem;}
+}
+@media (max-width:767px) {
+    #fullpage .txtbox {float:none; width:96%;}
+    #fullpage .imgbox {float: none; width:96%;}
+    #fullpage .imgbox a {position:absolute; top:50%; left:50%; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%); width:50%;}
+    #fp-nav.right {right:5px;}
+    #fl_top {right:5px;}
+    #fullpage .imgbox .imgbox_bg {display:none;}
+}
+/* sub2 (portfolio) fin / =================================================== */
+
+
+/* sub3 (about) / ======================================================= */
+#about {width:100%; height:100%; overflow: hidden;}
+#about .about_cont {height:auto; position:relative;}
+#about .about_left {float:left; width:50%;}
+#about .about_left .logo_ani {width:300px; margin:0 auto;}
+#about .about_left .logo_ani div {border-radius: 50%; }
+#about .about_left .logo_ani .big {width:300px; height:300px; position:relative; -webkit-animation:tr0 10s infinite forwards; animation:tr0 10s infinite forwards;}
+@keyframes tr0 {
+    30% {-webkit-transform: unset; transform: unset;}
+    60% {-webkit-transform: rotate(180deg); transform: rotate(180deg);}
+    80% {-webkit-transform: unset; transform: unset;}
+}
+#about .about_left .logo_ani .sm {width:100px; height:100px; background:rgba(255,233,0,.4); position: absolute; top:35%; left:35%;}
+#about .about_left .logo_ani #sm1 {-webkit-animation:tr1 10s infinite; animation:tr1 10s infinite;}
+@keyframes tr1 {
+    20%{-webkit-transform:translate(-25%, -25%); transform:translate(-25%, -25%);}
+    60%{-webkit-transform:translate(-25%, -25%); transform:translate(-25%, -25%);}
+    80%{-webkit-transform:translate(0,0); transform:translate(0,0);}
+}
+#about .about_left .logo_ani #sm2 {-webkit-animation:tr2 10s infinite; animation:tr2 10s infinite;}
+@keyframes tr2 {
+    20%{-webkit-transform:translate(25%, -25%); transform:translate(25%, -25%);}
+    60%{-webkit-transform:translate(25%, -25%); transform:translate(25%, -25%);}
+    80%{-webkit-transform:translate(0,0); transform:translate(0,0);}
+}
+#about .about_left .logo_ani #sm3 {-webkit-animation:tr3 10s infinite; animation:tr3 10s infinite;}
+@keyframes tr3 {
+    20%{-webkit-transform:translate(0, 25%); transform:translate(0, 25%);}
+    60%{-webkit-transform:translate(0, 25%); transform:translate(0, 25%);}
+    80%{-webkit-transform:translate(0,0); transform:translate(0,0);}
+}
+#about .about_left .logo_name {text-align: center;}
+#about .about_left .logo_name p {font-size:2.5rem; font-weight:bold;}
+#about .about_left .logo_name p span {color:#f9d401;}
+#about .about_left .about_txt  {width:60%; margin:0 20%; padding-top:2rem;}
+#about .about_left .about_txt p {padding-bottom:1rem; text-align: center;}
+#about .about_left .about_txt strong {display:inline-block;}
+#about .about_img {float:right; width:50%;}
+#about .about_img img {position:absolute; bottom:0; right:0; width:40%;}
+/* about 미디어쿼리 */
+@media (max-width:1299px){
+    #about .about_left {float:none; width:100%;}
+    #about .about_left .about_txt {width:96%; margin:0 2%;}
+    #about .about_img {float:none; width:100%; text-align:center;}
+    #about .about_img img {position: inherit; width:50%;}
+}
+/* sub3 (about) fin / ======================================================= */
