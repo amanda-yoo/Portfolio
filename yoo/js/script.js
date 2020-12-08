@@ -8,6 +8,12 @@ $(function(){
             $('.header').addClass('on');
         }            
     });
+
+    $('body').click(function (e) {
+        if (!$('.header').has(e.target).length) {
+            $('.header').removeClass('on');
+        }
+    });
     
     // nav 메뉴색 변화
     $('nav ul li').hover(function(){
