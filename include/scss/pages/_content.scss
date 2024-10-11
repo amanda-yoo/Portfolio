@@ -1,0 +1,146 @@
+/* who */
+.who-wrap {
+	margin-top: -1px;
+	background-color: #f6f6f6;
+	.main-conbox {
+		p {
+			text-align: right;
+		}
+	}
+}
+
+/* what */
+.what-list {
+	li {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding: 40px;
+		transition-property: opacity, transform, box-shadow !important;
+		& + li {
+			margin-top: 20px;
+		}
+		strong {
+			display: inline-block;
+			width: 30%;
+			padding-right: 20px;
+			font-family: "Playfair Display", serif;
+			font-size: 3rem;
+			line-height: 1.5em;
+			color: #333;
+			font-weight: 500;
+		}
+		p {
+			width: 70%;
+		}
+	}
+}
+
+/* how */
+.how-wrap {
+	background-color: #f6f6f6;
+	.how-list {
+		display: flex;
+		li {
+			position: relative;
+			width: 30%;
+			min-height: 300px;
+			padding: 50px;
+			& + li {
+			margin-left: 5%;
+			}
+			strong {
+				display: block;
+				margin-bottom: 2rem;
+				padding-bottom: 1rem;
+				padding-right: 5rem;
+				border-bottom: 1px solid #ddd;
+				font-family: "Playfair Display", serif;
+				font-size: 3rem;
+				color: #333;
+				font-weight: 600;
+			}
+			p {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+/* contact */
+.contact-wrap {
+	position: relative;
+	background-color: #f6f6f6;
+	.contact-conbox {
+		padding: 50px 0;
+		dl {
+			display: flex;
+			align-items: center;
+			& + dl {
+				margin-top: 50px;
+			}
+			dt {
+				width: 150px;
+				font-size: 5rem;
+				font-weight: 500;
+				font-family: "Playfair Display", serif;
+			}
+			dd {
+				margin-left: 20px;
+				font-size: 4rem;
+				font-weight: 500;
+				word-break: break-all;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1024px){
+	.how-list {
+		flex-direction: column;
+		li {
+			width: 100%;
+			min-height: initial;
+			padding: 30px;
+			& + li {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.what-list {
+		li {
+			flex-direction: column;
+			padding: 30px;
+			strong {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			p {
+				width: 100%;
+			}
+		}
+	}
+
+	.contact-conbox {
+		padding: 30px 0;
+		dl{
+			& + dl {
+				margin-top: 20px;
+			}
+			dt {
+				width: 70px;
+				font-size: 2.5rem;
+			}
+			dd {
+				margin-left: 10px;
+				font-size: 2rem;
+			}
+		}
+	}
+}

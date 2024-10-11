@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+    <a id="kakao-link-btn" href="javascript:kakaoShare()">
+		<img src="https://www.itall.com/img/suneung/event/2024_itallpasstar/btn_kakao.png" />
+    </a>
+</body>
+
+<!-- kakao sdk 호출 -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+<script type="text/javascript">
+  	// SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+	Kakao.init('e3b681695570dc6c98159077f912178d');
+
+	function kakaoShare() {
+		Kakao.Link.sendDefault({
+			objectType: 'feed',
+			content: {
+				title: '잇올 합격 패스타 2024',
+				description: '고생했고! 대견해! 결국 해낸 너를 위해 준비했어! 2024학년도 잇올 합격 인증 이벤트!',
+				imageUrl: 'https://www.itall.com/img/suneung/event/2024_itallpasstar/passtar_og.png',
+				link: {
+				mobileWebUrl: 'https://m.itall.com/suneung/event/2024_itallpasstar.asp',
+				webUrl: 'https://itall.com/suneung/event/2024_itallpasstar.asp',
+				},
+			},
+			buttons: [
+				{
+				title: '자세히 보기',
+				link: {
+					mobileWebUrl: 'https://m.itall.com/suneung/event/2024_itallpasstar.asp',
+					webUrl: 'https://itall.com/suneung/event/2024_itallpasstar.asp',
+				},
+				},
+			],
+			// 카카오톡 미설치 시 카카오톡 설치 경로이동
+			installTalk: true,
+			})
+	}
+</script>
+</html>

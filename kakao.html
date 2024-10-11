@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+  integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('e3b681695570dc6c98159077f912178d'); // 사용하려는 앱의 JavaScript 키 입력
+</script>
+
+<a id="kakaotalk-sharing-btn" href="javascript:shareMessage()">
+  <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+    alt="카카오톡 공유 보내기 버튼" />
+</a>
+
+<script>
+  function shareMessage() {
+    Kakao.Share.sendDefault({
+      objectType: 'text',
+      text:
+        '이넝의 포트폴리오입니다 TEST',
+      link: {
+        // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+        mobileWebUrl: 'http://iyiyi.pe.kr',
+        webUrl: 'http://iyiyi.pe.kr',
+      },
+    });
+  }
+</script>
+</body>
+</html>

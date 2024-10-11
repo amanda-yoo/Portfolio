@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- link copy -->
+<input type="text" id="text" value="https://www.itall.com/suneung/recruit/2025_Jaesu_class.asp" style="display: none;"/>
+<input type="button" onclick="urlCopy()" value="현재 URL 복사"/>
+
+<script>
+function urlCopy() {
+    var url = document.getElementById('text');
+    url.style.display='block';    // 숨겨둔 input 태그 block처리
+    url.select();    // 복사할 text 블럭
+    document.execCommand('copy');    // 드레그된 text 클립보드에 복사
+    url.style.display='none';    // 다시 숨기기
+    alert('url이 복사 되었습니다.')
+}
+</script>
+
+<!-- kakao -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+  integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('e3b681695570dc6c98159077f912178d'); // 사용하려는 앱의 JavaScript 키 입력
+</script>
+
+<a id="kakaotalk-sharing-btn" href="javascript:shareMessage()">
+  <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+    alt="카카오톡 공유 보내기 버튼" />
+</a>
+
+<script>
+	function shareMessage() {
+		Kakao.Share.sendDefault({
+	objectType: 'calendar',
+	idType: 'event',
+	// id: '${YOUR_EVENT_ID}',
+	content: {
+		title: '1월 신작 평론 모임',
+		description: '따끈한 신작 감상평을 나누는 월간 모임에 초대합니다.',
+		imageUrl:
+		'http://k.kakaocdn.net/dn/dFUqwp/bl3SUTqb2VV/VFSqyPpKUzZVVMcmotN9A0/kakaolink40_original.png',
+		link: {
+		webUrl: 'http://iyiyi.pe.kr',
+		mobileWebUrl: 'http://iyiyi.pe.kr',
+		},
+	},
+	buttons: [
+		{
+		title: '모임 주제 보기',
+		link: {
+			webUrl: 'https://developers.kakao.com',
+			mobileWebUrl: 'https://developers.kakao.com',
+		},
+		},
+	],
+	});
+  }
+</script>
+</body>
+</html>

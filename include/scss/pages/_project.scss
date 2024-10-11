@@ -1,0 +1,252 @@
+/* project */
+.main-contents {
+	.project-wrap {
+		position: relative;
+		height: auto;
+	}
+}
+	
+.pro-tab-wrap {
+	.pro-tab {
+		display: flex;
+		li {
+			position: relative;
+			a {
+				font-family: "Playfair Display", serif;
+				font-size: 3rem;
+				line-height: 1.4em;
+				font-weight: 700;
+				color: #999;
+				.cnt {
+					display: inline-block;
+					position: absolute;
+					top: -10px;
+					right: -15px;
+					width: 30px;
+					height: 30px;
+					padding: 7px 0;
+					border-radius: 50%;
+					background-color: rgba(255, 0, 0, 0.85);
+					font-size: 1.6rem;
+					line-height: 1em;
+					color: #ffffff;
+					text-align: center;
+				}
+			}
+			&.on {
+				a {
+					color: #333;
+				}
+			}
+			& + li {
+				margin-left: 100px;
+			}
+		}
+	}
+	.help-text {
+		margin-top: 20px;
+		p {
+			display: none;
+			font-size: 14px;
+			line-height: 1.4em;
+			color: #999;
+			word-break: keep-all;
+			strong {
+				font-weight: 700;
+				color: #f91858;
+			}
+			&.on {
+				display: block;
+			}
+		}
+	}
+}
+
+.pro-list-wrap {
+	width: 100%;
+	margin-top: 40px;
+	.pro-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-top: -20px;
+		.pro-conbox {
+			width: calc((100% - 90px) / 3);
+			margin-left: 30px;
+			margin-top: 20px;
+			.img-wrap {
+				overflow: hidden;
+				a {
+					display: block;
+					position: relative;
+					&:before,
+					&:after{
+						display: block;
+						position: absolute;
+						z-index: 1;
+						transition: 0.4s;
+						opacity: 0;
+					}
+					&:before{
+						content: "";
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0, 0, 0, 0.8);
+					}
+					&:after{
+						content: "View Site";
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						padding-bottom: 5px;
+						border-bottom: 1px solid #fff;
+						font-family: "Playfair Display", serif;
+						font-size: 2rem;
+						color: #ffffff;
+					}
+					img {
+						max-width: 100%;
+						transition: 0.5s;
+					}
+					&:hover{
+						&:before,
+						&:after{
+							opacity: 1;
+						}
+						img {
+						transform: scale(1.03);
+						}
+					}
+				}
+			}
+			.pro-text {
+				padding: 20px 0;
+				text-align: center;
+				span {
+					display: inline-block;
+					padding: 5px 10px;
+					margin: 0 2px;
+					border-radius: 2rem;
+					font-size: 14px;
+					color: #ffffff;
+					vertical-align: middle;
+					&.pro-deg {
+						background-color: #333;
+					}
+				}
+				.pro-tit {
+					display: block;
+					margin-top: 10px;
+					font-size: 2rem;
+					line-height: 1.2em;
+					font-weight: 700;
+					word-break: keep-all;
+					.pro-notopen {
+						width: 20px;
+						height: 20px;
+						padding: 4px;
+						border-radius: 50%;
+						background-color: #f00;
+						font-size: 12px;
+						line-height: 1em;
+						color: #ffffff;
+					}
+				}
+			}
+			&.new{
+				.pro-type{
+					background-color: #171c8f;
+				}
+			}
+			&.legacy{
+				.pro-type{
+					background-color: #f91858;
+				}
+			}
+			&.maintenance{
+				.pro-type{
+					background-color: #E0462E;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+	.pro-list-wrap{
+		.pro-list{
+			margin-left: -20px;
+			.pro-conbox{
+				width: calc((100% - 60px) / 3);
+				margin-left: 20px;
+				.pro-info{
+					&.on {
+					opacity: 1;
+					transition-delay: 0.2s;
+						&:before {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.pro-tab-wrap{
+		.pro-tab {
+			li{
+				& + li {
+					margin-left: 25px;
+				}
+				a {
+					.cnt {
+						width: 24px;
+						height: 24px;
+						padding: 6px 0;
+					}
+				}
+			}
+		}
+	}
+
+	.pro-list-wrap{
+		.pro-list {
+			.pro-conbox {
+				width: calc((100% - 40px) / 2);
+				.pro-text {
+					padding: 15px 0 0;
+					span {
+						font-size: 12px;
+					}
+					.pro-tit {
+						.pro-notopen {
+						width: 15px;
+						height: 15px;
+						padding: 2px;
+						font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+	.pro-list-wrap {
+		.pro-list {
+			margin-left: 0;
+			.pro-conbox {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+}
