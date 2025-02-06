@@ -301,6 +301,25 @@ body::-webkit-scrollbar-track {
 .who-wrap .main-conbox p {
   text-align: right;
 }
+.who-wrap .btn-wrap{
+	margin-top: 40px;
+	text-align: right;
+}
+.who-wrap .btn-wrap a{
+	display: inline-block;
+	padding: 20px 40px;
+	border: 1px solid #000;
+	text-align: right;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.who-wrap .btn-wrap a:hover{
+	background-color: #000;
+	color: #fff;
+}
+.who-wrap .btn-wrap a span{
+	font-size: 20px;
+}
 
 /* what */
 .what-list li {
@@ -656,6 +675,9 @@ body::-webkit-scrollbar-track {
   .main-contents article {
     padding: 60px 40px 80px;
   }
+	.who-wrap .btn-wrap a span{
+		font-size: 16px;
+	}
   .pro-conbox .pro-info.on {
     opacity: 1;
     transition-delay: 0.2s;
@@ -729,6 +751,12 @@ body::-webkit-scrollbar-track {
     margin-bottom: 30px;
     font-size: 6rem;
   }
+	.who-wrap .btn-wrap a{
+		padding: 10px 20px;
+	}
+	.who-wrap .btn-wrap a span{
+		font-size: 14px;
+	}
   .what-list li {
     flex-direction: column;
     padding: 30px;
